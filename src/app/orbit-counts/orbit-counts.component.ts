@@ -25,7 +25,21 @@ export class OrbitCountsComponent implements OnInit {
 	  }
 	}
 	return count;
- }
+ } 
+
+    countByName(name: string): number{
+		let count = 0;
+		if (this.satellites) {
+			for (let i = 0; i < this.satellites.length; i++) {
+			   if (this.satellites[i].name=== name) {
+				  count++;
+			   }
+			}
+		  }
+
+		return count;
+
+	}
 
 
 }
